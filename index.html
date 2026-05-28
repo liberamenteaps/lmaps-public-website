@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liberamente APS - Promozione Sociale e Benessere</title>
+    <meta name="description" content="Sito ufficiale di Liberamente APS. Interventi nel sociale, scuole, carceri e aziende per promuovere il benessere psicofisico e l'inclusione.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar" id="navbar">
+        <div class="logo">Liberamente <span class="accent">APS</span></div>
+        <nav>
+            <a href="index.html#progetti">Aree di Intervento</a>
+            <a href="trasparenza.html">Trasparenza</a>
+            <a href="#contatti" class="btn-primary">Contattaci</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-content reveal-up">
+                <h1>Sosteniamo la <span>società</span> ripartendo dalla persona.</h1>
+                <p>Siamo un'Associazione di Promozione Sociale dedicata a portare strumenti pratici di consapevolezza e benessere nei contesti in cui c'è più bisogno.</p>
+                <div class="hero-actions">
+                    <a href="#progetti" class="btn-primary large">Scopri i Progetti</a>
+                    <a href="trasparenza.html" class="btn-secondary large">Chi Siamo</a>
+                </div>
+            </div>
+            <div class="hero-image reveal-fade">
+                <div class="img-wrapper shadow-glow">
+                    <!-- Placeholder using the generated community image -->
+                    <img src="images/projects.png" alt="Gruppo in ascolto e supporto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Metodo (Ridimensionato) -->
+    <section class="banner-metodo">
+        <div class="container">
+            <div class="text">
+                <h3>Il Nostro Approccio: Il Metodo Magrin</h3>
+                <p>I nostri operatori utilizzano tecniche di rilascio emozionale basate sulle sensazioni corporee.</p>
+            </div>
+            <div class="banner-actions">
+                <!-- Questi sono link esterni (fittizi per il momento) -->
+                <a href="https://www.metodomagrin.com" target="_blank" rel="noopener" class="btn-primary">Sito Ufficiale del Metodo</a>
+                <a href="#" class="btn-outline">Canale YouTube</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Aree di Intervento -->
+    <section id="progetti" class="section-light">
+        <div class="container text-center reveal-up">
+            <h2>Aree di Intervento</h2>
+            <p class="subtitle">Creiamo valore sul territorio attraverso cinque direttrici principali, sviluppando progetti su misura per ogni realtà.</p>
+        </div>
+        
+        <div class="projects-flex container">
+            
+            <!-- 1. Scuole -->
+            <div class="card reveal-up" style="transition-delay: 0.1s;">
+                <!-- filter per variare i colori placeholder -->
+                <div class="card-img" style="background-image: url('images/hero.png'); filter: hue-rotate(-20deg);"></div>
+                <div class="card-content">
+                    <h3>Scuole e Università</h3>
+                    <p>Educazione emotiva per prevenire il disagio giovanile. Lavoriamo con studenti e corpo docenti.</p>
+                    <a href="progetti/scuole.html" class="btn-outline">Vedi un Esempio &rarr;</a>
+                </div>
+            </div>
+
+            <!-- 2. Ospedali -->
+            <div class="card reveal-up" style="transition-delay: 0.2s;">
+                <div class="card-img" style="background-image: url('images/method.png'); filter: grayscale(0.2) sepia(0.2);"></div>
+                <div class="card-content">
+                    <h3>Ospedali e Sanità</h3>
+                    <p>Supporto al personale sanitario (prevenzione burnout) e accompagnamento ai degenti nei reparti critici.</p>
+                    <a href="#" class="btn-outline">Scopri di più &rarr;</a>
+                </div>
+            </div>
+
+            <!-- 3. Carceri -->
+            <div class="card reveal-up" style="transition-delay: 0.3s;">
+                <div class="card-img" style="background-image: url('images/projects.png'); filter: contrast(1.2) saturate(0.5);"></div>
+                <div class="card-content">
+                    <h3>Carceri</h3>
+                    <p>Percorsi di sostegno psicologico per i detenuti volti ad abbattere la recidiva e favorire il reinserimento.</p>
+                    <a href="#" class="btn-outline">Scopri di più &rarr;</a>
+                </div>
+            </div>
+
+            <!-- 4. Aziende -->
+            <div class="card reveal-up" style="transition-delay: 0.4s;">
+                <div class="card-img" style="background-image: url('images/projects.png'); filter: hue-rotate(90deg);"></div>
+                <div class="card-content">
+                    <h3>Aziende</h3>
+                    <p>Welfare aziendale e team building: forniamo strumenti per la gestione dello stress e la coesione dei gruppi di lavoro.</p>
+                    <a href="#" class="btn-outline">Scopri di più &rarr;</a>
+                </div>
+            </div>
+
+            <!-- 5. Sociale -->
+            <div class="card reveal-up" style="transition-delay: 0.5s;">
+                <div class="card-img" style="background-image: url('images/hero.png'); filter: saturate(1.5);"></div>
+                <div class="card-content">
+                    <h3>Supporto al Sociale</h3>
+                    <p>Interventi in collaborazione con altre associazioni, centri di accoglienza e fasce vulnerabili della popolazione.</p>
+                    <a href="#" class="btn-outline">Scopri di più &rarr;</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contatti">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <div class="logo">Liberamente <span class="accent">APS</span></div>
+                <p class="footer-desc">Associazione di Promozione Sociale iscritta al RUNTS.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Link Utili</h4>
+                <a href="trasparenza.html">Trasparenza e Burocrazia</a>
+                <a href="#">Sostienici / Diventa Socio</a>
+                <a href="https://www.metodomagrin.com">Il Metodo Magrin</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contatti Sede</h4>
+                <a href="mailto:segreteria@liberamenteaps.org" class="contact-link">segreteria@liberamenteaps.org</a>
+                <p class="address">Sede Legale: Via Garibaldi 10, Milano (MI)</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Liberamente APS. Tutti i diritti riservati. Codice Fiscale: 99999999999</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
