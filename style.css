@@ -124,10 +124,13 @@ footer { background: var(--bg-dark); color: white; padding: 80px 0 20px; }
 .footer-bottom { text-align: center; padding-top: 32px; border-top: 1px solid hsla(0, 0%, 100%, 0.05); color: hsl(220, 10%, 50%); font-size: 0.9rem; }
 
 /* --- Storia Section --- */
-.storia-container { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: center; }
-.storia-text p { font-size: 1.1rem; color: var(--text-main); margin-bottom: 20px; text-align: justify; }
-.storia-quote-card { background: linear-gradient(135deg, hsl(142, 25%, 94%) 0%, hsl(142, 20%, 97%) 100%); border-left: 5px solid var(--primary-color); padding: 40px; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); position: relative; }
-.storia-quote-card blockquote { font-size: 1.45rem; font-style: italic; color: var(--bg-dark); line-height: 1.5; margin-bottom: 20px; font-weight: 500; }
+#storia { background: linear-gradient(180deg, hsl(142, 25%, 98%) 0%, white 100%); padding: 120px 0; }
+.storia-container { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 64px; align-items: center; }
+.storia-text p { font-size: 1.1rem; color: var(--text-main); margin-bottom: 22px; text-align: justify; line-height: 1.7; }
+.storia-quote-card { background: white; border: 1px solid hsla(142, 70%, 40%, 0.1); border-left: 6px solid var(--primary-color); padding: 48px 40px; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); position: relative; transition: var(--transition); }
+.storia-quote-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+.storia-quote-card::before { content: "“"; font-size: 8rem; position: absolute; top: -20px; left: 20px; color: hsla(142, 70%, 40%, 0.06); font-family: serif; line-height: 1; }
+.storia-quote-card blockquote { font-size: 1.5rem; font-style: italic; color: var(--bg-dark); line-height: 1.5; margin-bottom: 24px; font-weight: 500; position: relative; z-index: 2; }
 .storia-quote-card cite { font-size: 0.9rem; font-weight: 700; color: var(--text-muted); display: block; text-transform: uppercase; letter-spacing: 1px; }
 
 /* --- Metodo Magrin Section --- */
@@ -138,21 +141,22 @@ footer { background: var(--bg-dark); color: white; padding: 80px 0 20px; }
 .tool-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); border-color: var(--primary-color); }
 .tool-card h4 { font-size: 1.5rem; color: var(--bg-dark); margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
 .tool-card h4 span { background: hsla(142, 70%, 40%, 0.1); color: var(--primary-color); width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 700; }
-.tool-card p { color: var(--text-muted); font-size: 1rem; margin: 0; }
+.tool-card p { color: var(--text-muted); font-size: 1rem; margin: 0; line-height: 1.6; }
 
 .fasi-title { text-align: center; margin-bottom: 48px; }
 .fasi-title h3 { font-size: 2.2rem; margin-bottom: 8px; }
 .fasi-title p { color: var(--text-muted); font-size: 1.1rem; }
 .fasi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 80px; }
-.fase-card { background: hsl(0, 0%, 98%); padding: 32px; border-radius: var(--radius-md); border-top: 4px solid var(--primary-color); position: relative; box-shadow: var(--shadow-sm); transition: var(--transition); }
-.fase-card:hover { background: white; box-shadow: var(--shadow-md); transform: translateY(-3px); }
-.fase-number { position: absolute; top: 24px; right: 24px; font-size: 2.2rem; font-weight: 800; color: hsla(142, 70%, 40%, 0.15); }
+.fase-card { background: white; padding: 36px 32px; border-radius: var(--radius-md); border: 1px solid hsla(0, 0%, 0%, 0.04); border-top: 4px solid var(--primary-color); position: relative; box-shadow: var(--shadow-sm); transition: var(--transition); }
+.fase-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-5px) scale(1.02); border-top-color: var(--primary-color-hover); }
+.fase-number { position: absolute; top: 20px; right: 24px; font-size: 2.5rem; font-weight: 900; color: hsla(142, 70%, 40%, 0.08); transition: var(--transition); }
+.fase-card:hover .fase-number { color: hsla(142, 70%, 40%, 0.25); transform: scale(1.1); }
 .fase-card h5 { font-size: 1.25rem; margin-bottom: 12px; color: var(--bg-dark); }
-.fase-card p { font-size: 0.95rem; color: var(--text-muted); margin: 0; }
+.fase-card p { font-size: 0.95rem; color: var(--text-muted); margin: 0; line-height: 1.5; }
 
 .metodo-extra { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: start; }
 .metodo-extra h4 { font-size: 1.8rem; margin-bottom: 24px; }
-.benefici-list { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; list-style: none; padding: 0; }
+.benefici-list { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; list-style: none; padding: 0; }
 .benefici-list li { display: flex; gap: 12px; font-size: 1rem; color: var(--text-main); line-height: 1.4; }
 .benefici-list li strong { color: var(--bg-dark); }
 .benefici-list li::before { content: "✓"; color: var(--primary-color); font-weight: bold; font-size: 1.2rem; }
@@ -165,12 +169,25 @@ footer { background: var(--bg-dark); color: white; padding: 80px 0 20px; }
 .modello-box li::before { content: "→"; color: var(--primary-color); font-weight: bold; }
 
 /* --- Diventa Socio Section --- */
-.diventa-socio { background: linear-gradient(135deg, var(--bg-dark) 0%, hsl(220, 20%, 8%) 100%); color: white; text-align: center; padding: 100px 0; }
-.diventa-socio h2 { color: white; font-size: 3rem; margin-bottom: 20px; }
-.diventa-socio h2 span { color: var(--primary-color); }
-.diventa-socio p { color: hsl(220, 10%, 75%); font-size: 1.2rem; max-width: 700px; margin: 0 auto 40px; }
-.diventa-socio .btn-primary { background: var(--primary-color); font-size: 1.1rem; padding: 16px 40px; border: none; cursor: pointer; }
-.diventa-socio .btn-primary:hover { background: var(--primary-color-hover); }
+.diventa-socio { background: linear-gradient(135deg, var(--bg-dark) 0%, hsl(220, 20%, 8%) 100%); color: white; padding: 120px 0; }
+.diventa-socio-container { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: start; text-align: left; }
+.diventa-socio-info h2 { color: white; font-size: 3rem; margin-bottom: 24px; }
+.diventa-socio-info h2 span { color: var(--primary-color); }
+.diventa-socio-info p { color: hsl(220, 10%, 75%); font-size: 1.1rem; margin-bottom: 40px; line-height: 1.6; }
+.socio-benefits { display: flex; flex-direction: column; gap: 20px; }
+.benefit-item { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); padding: 20px 24px; border-radius: var(--radius-md); transition: var(--transition); }
+.benefit-item:hover { background: rgba(255, 255, 255, 0.06); border-color: var(--primary-color); transform: translateX(5px); }
+.benefit-item strong { color: white; font-size: 1.1rem; display: block; margin-bottom: 6px; }
+.benefit-item p { color: hsl(220, 10%, 70%); font-size: 0.95rem; margin: 0; }
+
+.diventa-socio-form-wrapper { background: white; padding: 40px; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); border: 1px solid hsla(0, 0%, 100%, 0.05); color: var(--text-main); }
+.socio-form { display: flex; flex-direction: column; gap: 18px; }
+.form-row { width: 100%; }
+.form-group { display: flex; flex-direction: column; gap: 8px; text-align: left; }
+.form-group label { font-size: 0.9rem; font-weight: 600; color: var(--bg-dark); }
+.form-group input, .form-group textarea { padding: 12px 16px; border: 1px solid hsl(220, 10%, 85%); border-radius: 8px; font-family: inherit; font-size: 0.95rem; color: var(--bg-dark); background: hsl(0, 0%, 98%); transition: var(--transition); }
+.form-group input::placeholder, .form-group textarea::placeholder { color: hsl(220, 10%, 70%); }
+.form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--primary-color); background: white; box-shadow: 0 0 0 4px hsla(142, 70%, 40%, 0.1); }
 
 /* --- Animations --- */
 .reveal-up { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1); }
@@ -188,6 +205,9 @@ footer { background: var(--bg-dark); color: white; padding: 80px 0 20px; }
     
     .storia-container, .metodo-tools, .metodo-extra { grid-template-columns: 1fr; gap: 40px; }
     .fasi-grid { grid-template-columns: repeat(2, 1fr); }
+    
+    .diventa-socio-container { grid-template-columns: 1fr; gap: 48px; text-align: center; }
+    .diventa-socio-info p { margin-bottom: 32px; }
 }
 @media (max-width: 768px) {
     .projects-flex .card { width: 100%; }
@@ -196,5 +216,5 @@ footer { background: var(--bg-dark); color: white; padding: 80px 0 20px; }
     
     .fasi-grid { grid-template-columns: 1fr; }
     .benefici-list { grid-template-columns: 1fr; }
-    .diventa-socio h2 { font-size: 2.2rem; }
+    .diventa-socio-info h2 { font-size: 2.2rem; }
 }
