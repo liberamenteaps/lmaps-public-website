@@ -29,8 +29,9 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
 
 /* --- Navbar --- */
 .navbar { position: fixed; top: 0; left: 0; width: 100%; padding: 20px 0; display: flex; justify-content: space-between; align-items: center; background: transparent; transition: var(--transition); z-index: 1000; }
-.navbar .logo { font-size: 1.5rem; font-weight: 800; color: var(--bg-dark); margin-left: 24px; }
+.navbar .logo { display: flex; align-items: center; gap: 12px; font-size: 1.5rem; font-weight: 800; color: var(--bg-dark); margin-left: 24px; }
 .navbar .logo .accent { color: var(--primary-color); }
+.logo-img { height: 40px; width: auto; border-radius: 6px; object-fit: contain; background: white; padding: 2px; box-shadow: var(--shadow-sm); }
 .navbar nav { display: flex; align-items: center; gap: 32px; margin-right: 24px; }
 .navbar nav a { font-weight: 500; color: var(--text-main); }
 .navbar nav a:hover:not(.btn-primary) { color: var(--primary-color); }
@@ -112,7 +113,7 @@ section { padding: 100px 0; }
 /* --- Footer --- */
 footer { background: var(--bg-dark); color: white; padding: 80px 0 20px; }
 .footer-content { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 64px; margin-bottom: 64px; }
-.footer-col .logo { font-size: 1.5rem; font-weight: 800; margin-bottom: 16px; color: white; }
+.footer-col .logo { display: flex; align-items: center; gap: 12px; font-size: 1.5rem; font-weight: 800; margin-bottom: 16px; color: white; }
 .footer-col .accent { color: var(--primary-color); }
 .footer-desc { color: hsl(220, 10%, 60%); max-width: 300px; }
 .footer-col h4 { color: white; font-size: 1.1rem; margin-bottom: 24px; }
@@ -121,6 +122,55 @@ footer { background: var(--bg-dark); color: white; padding: 80px 0 20px; }
 .contact-link { font-size: 1.1rem; color: var(--primary-color) !important; font-weight: 600; margin-top: 8px; margin-bottom: 16px !important; }
 .address { color: hsl(220, 10%, 60%); font-size: 0.9rem; }
 .footer-bottom { text-align: center; padding-top: 32px; border-top: 1px solid hsla(0, 0%, 100%, 0.05); color: hsl(220, 10%, 50%); font-size: 0.9rem; }
+
+/* --- Storia Section --- */
+.storia-container { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: center; }
+.storia-text p { font-size: 1.1rem; color: var(--text-main); margin-bottom: 20px; text-align: justify; }
+.storia-quote-card { background: linear-gradient(135deg, hsl(142, 25%, 94%) 0%, hsl(142, 20%, 97%) 100%); border-left: 5px solid var(--primary-color); padding: 40px; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); position: relative; }
+.storia-quote-card blockquote { font-size: 1.45rem; font-style: italic; color: var(--bg-dark); line-height: 1.5; margin-bottom: 20px; font-weight: 500; }
+.storia-quote-card cite { font-size: 0.9rem; font-weight: 700; color: var(--text-muted); display: block; text-transform: uppercase; letter-spacing: 1px; }
+
+/* --- Metodo Magrin Section --- */
+.metodo-intro { max-width: 800px; margin: 0 auto 60px; text-align: center; }
+.metodo-intro p { font-size: 1.2rem; color: var(--text-muted); }
+.metodo-tools { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 80px; }
+.tool-card { background: white; padding: 40px; border-radius: var(--radius-lg); border: 1px solid hsla(0, 0%, 0%, 0.05); box-shadow: var(--shadow-sm); transition: var(--transition); }
+.tool-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); border-color: var(--primary-color); }
+.tool-card h4 { font-size: 1.5rem; color: var(--bg-dark); margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
+.tool-card h4 span { background: hsla(142, 70%, 40%, 0.1); color: var(--primary-color); width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 700; }
+.tool-card p { color: var(--text-muted); font-size: 1rem; margin: 0; }
+
+.fasi-title { text-align: center; margin-bottom: 48px; }
+.fasi-title h3 { font-size: 2.2rem; margin-bottom: 8px; }
+.fasi-title p { color: var(--text-muted); font-size: 1.1rem; }
+.fasi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 80px; }
+.fase-card { background: hsl(0, 0%, 98%); padding: 32px; border-radius: var(--radius-md); border-top: 4px solid var(--primary-color); position: relative; box-shadow: var(--shadow-sm); transition: var(--transition); }
+.fase-card:hover { background: white; box-shadow: var(--shadow-md); transform: translateY(-3px); }
+.fase-number { position: absolute; top: 24px; right: 24px; font-size: 2.2rem; font-weight: 800; color: hsla(142, 70%, 40%, 0.15); }
+.fase-card h5 { font-size: 1.25rem; margin-bottom: 12px; color: var(--bg-dark); }
+.fase-card p { font-size: 0.95rem; color: var(--text-muted); margin: 0; }
+
+.metodo-extra { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: start; }
+.metodo-extra h4 { font-size: 1.8rem; margin-bottom: 24px; }
+.benefici-list { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; list-style: none; padding: 0; }
+.benefici-list li { display: flex; gap: 12px; font-size: 1rem; color: var(--text-main); line-height: 1.4; }
+.benefici-list li strong { color: var(--bg-dark); }
+.benefici-list li::before { content: "✓"; color: var(--primary-color); font-weight: bold; font-size: 1.2rem; }
+.modello-box { background: var(--bg-dark); color: white; padding: 40px; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); }
+.modello-box h4 { color: white; font-size: 1.5rem; margin-bottom: 16px; }
+.modello-box p { color: hsl(220, 10%, 75%); font-size: 0.95rem; margin-bottom: 24px; }
+.modello-box ul { list-style: none; padding: 0; }
+.modello-box li { margin-bottom: 14px; font-size: 0.95rem; color: hsl(220, 10%, 75%); display: flex; gap: 10px; line-height: 1.4; }
+.modello-box li strong { color: white; }
+.modello-box li::before { content: "→"; color: var(--primary-color); font-weight: bold; }
+
+/* --- Diventa Socio Section --- */
+.diventa-socio { background: linear-gradient(135deg, var(--bg-dark) 0%, hsl(220, 20%, 8%) 100%); color: white; text-align: center; padding: 100px 0; }
+.diventa-socio h2 { color: white; font-size: 3rem; margin-bottom: 20px; }
+.diventa-socio h2 span { color: var(--primary-color); }
+.diventa-socio p { color: hsl(220, 10%, 75%); font-size: 1.2rem; max-width: 700px; margin: 0 auto 40px; }
+.diventa-socio .btn-primary { background: var(--primary-color); font-size: 1.1rem; padding: 16px 40px; border: none; cursor: pointer; }
+.diventa-socio .btn-primary:hover { background: var(--primary-color-hover); }
 
 /* --- Animations --- */
 .reveal-up { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1); }
@@ -135,9 +185,16 @@ footer { background: var(--bg-dark); color: white; padding: 80px 0 20px; }
     .projects-flex .card { width: calc(50% - 16px); }
     .footer-content { grid-template-columns: 1fr 1fr; }
     .banner-metodo .container { flex-direction: column; text-align: center; }
+    
+    .storia-container, .metodo-tools, .metodo-extra { grid-template-columns: 1fr; gap: 40px; }
+    .fasi-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 768px) {
     .projects-flex .card { width: 100%; }
     .footer-content { grid-template-columns: 1fr; }
     .navbar nav { display: none; }
+    
+    .fasi-grid { grid-template-columns: 1fr; }
+    .benefici-list { grid-template-columns: 1fr; }
+    .diventa-socio h2 { font-size: 2.2rem; }
 }
