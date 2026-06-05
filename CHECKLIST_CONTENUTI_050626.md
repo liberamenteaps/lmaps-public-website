@@ -19,9 +19,9 @@ Questo documento riassume gli adempimenti di trasparenza, i dati e i documenti o
 - [ ] **Bilancio di Esercizio 2026**: Attualmente contrassegnato nel codice come *"In corso"* (esercizio che si chiuderà il 31/12/2026). Non richiede azioni immediate, andrà approvato e pubblicato nel 2027.
 - [ ] **Rendicontazione Contributi Pubblici (Legge 124/2017)**: Se l'APS riceve sovvenzioni, contributi o vantaggi economici da amministrazioni pubbliche superiori a 10.000 € complessivi in un anno, deve pubblicare l'elenco dettagliato sul proprio sito entro il 30 giugno dell'anno successivo. Il codice include già il testo normativo predisposto nella sezione *"Rendicontazione Economica"*.
 
-## 3. Conformità GDPR e Informativa Privacy (Raccomandato)
-- [ ] **Informativa Privacy e Gestione Cookie**: Per legge (GDPR), trattando dati personali tramite i form di iscrizione socio, e-mail e possibili cookie di tracciamento, il sito deve disporre di una **Privacy Policy** ed un'eventuale **Cookie Policy** con un link nel piè di pagina.
-  - *Azione*: Predisporre i testi legali (es. tramite servizi come Iubenda o consulente legale) ed inserire un link nel footer (accanto all'area riservata soci).
+## 3. Conformità GDPR e Informativa Privacy (Completato)
+- [x] **Informativa Privacy**: Creata la pagina [privacy.html](privacy.html) contenente l'informativa GDPR semplificata per il trattamento dei contatti e-mail spontanei ed invio richieste di adesione. Il collegamento è stato inserito nel piè di pagina di tutte le pagine HTML del sito.
+- [x] **Gestione Cookie**: Verificato che il sito non fa uso di cookie di profilazione o tracciamento (Analytics, Pixel, ecc.). **Non è richiesto alcun cookie banner né Cookie Policy** sul sito.
 
 ---
 
