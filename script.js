@@ -11,11 +11,40 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Mobile Hamburger Menu Toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        });
+        
+        // Close menu when a link is clicked
+        const navLinks = navMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    }
+
     // Intersection Observer for scroll animations (Reveal effects)
     const observerOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.15 // Triggers when 15% of the element is visible
+        threshold: 0.05 // Triggers as soon as 5% of the element is visible (safer for mobile/tall elements)
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
