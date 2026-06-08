@@ -161,6 +161,22 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
 .hero-actions { display: flex; gap: 16px; }
 .hero-image .img-wrapper { border-radius: var(--radius-lg); overflow: hidden; transform: perspective(1000px) rotateY(-5deg); transition: var(--transition); box-shadow: var(--shadow-glow); }
 .hero-image img { width: 100%; height: auto; display: block; object-fit: cover; }
+.hero-image .hero-logo-wrapper {
+    aspect-ratio: 1 / 1;
+    background-color: white;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    max-width: 380px;
+    margin: 0 auto;
+}
+.hero-image img.hero-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 
 /* --- Metodo Banner --- */
 .banner-metodo { background: var(--bg-dark); padding: 40px 0; color: white; text-align: center; }
@@ -216,12 +232,12 @@ section { padding: 100px 0; }
 
 /* Sidebar Style */
 .project-banner-img {
-    height: 350px;
-    background-size: cover;
-    background-position: center;
+    width: 100%;
+    height: auto;
     border-radius: var(--radius-lg);
     margin-bottom: 40px;
     box-shadow: var(--shadow-sm);
+    display: block;
 }
 .project-sidebar { display: flex; flex-direction: column; gap: 24px; position: sticky; top: 120px; }
 .sidebar-card { background: hsl(142, 20%, 98%); border: 1px solid rgba(0, 0, 0, 0.05); padding: 32px; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
@@ -268,11 +284,8 @@ footer { background: var(--bg-dark); color: white; padding: 80px 0 20px; }
 #storia { background: linear-gradient(180deg, hsl(142, 25%, 98%) 0%, white 100%); padding: 120px 0; }
 .storia-container { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 64px; align-items: center; }
 .storia-text p.storia-intro-text { font-size: 1.2rem; color: var(--text-main); margin-bottom: 30px; font-weight: 500; }
-.storia-timeline { display: flex; flex-direction: column; gap: 28px; margin-top: 32px; }
-.timeline-step { display: flex; gap: 20px; align-items: flex-start; }
-.step-badge { background: var(--primary-color); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.1rem; flex-shrink: 0; box-shadow: var(--shadow-sm); }
-.step-content h4 { font-size: 1.25rem; margin-bottom: 6px; color: var(--bg-dark); }
-.step-content p { font-size: 1rem !important; color: var(--text-muted); margin: 0 !important; line-height: 1.5; text-align: justify; }
+.storia-racconto { display: flex; flex-direction: column; gap: 24px; margin-top: 32px; }
+.storia-racconto p { font-size: 1.05rem; color: var(--text-main); line-height: 1.75; text-align: justify; }
 .storia-quote-card { background: white; border: 1px solid hsla(142, 70%, 40%, 0.1); border-left: 6px solid var(--primary-color); padding: 48px 40px; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); position: relative; transition: var(--transition); }
 .storia-quote-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
 .storia-quote-card::before { content: "“"; font-size: 8rem; position: absolute; top: -20px; left: 20px; color: hsla(142, 70%, 40%, 0.06); font-family: serif; line-height: 1; }
@@ -410,7 +423,7 @@ footer { background: var(--bg-dark); color: white; padding: 80px 0 20px; }
     .benefici-list { grid-template-columns: 1fr; }
     .diventa-socio h2 { font-size: 2.2rem; }
     .project-banner-img {
-        height: 200px;
+        height: auto;
         margin-bottom: 24px;
     }
 }
@@ -450,10 +463,10 @@ footer { background: var(--bg-dark); color: white; padding: 80px 0 20px; }
 }
 
 /* --- Hero Image Aspect Ratio Fix --- */
-.hero-image .img-wrapper {
+.hero-image .img-wrapper:not(.hero-logo-wrapper) {
     aspect-ratio: 4/3;
 }
-.hero-image img {
+.hero-image img:not(.hero-logo-img) {
     height: 100%;
 }
 

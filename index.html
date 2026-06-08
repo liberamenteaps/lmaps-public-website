@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=1.4">
+    <link rel="stylesheet" href="style.css?v=1.5.3ed0a8c5">
     <link rel="icon" type="image/jpeg" href="images/logo_aps.jpeg">
     <link rel="canonical" href="https://liberamenteaps.com/">
     
@@ -50,16 +50,16 @@
 </head>
 <body>
     <header class="navbar" id="navbar">
-    <div class="logo">
+    <a href="index.html" class="logo">
         <img src="images/logo_aps.jpeg" alt="Logo Liberamente APS" class="logo-img">
         <span>Liberamente <span class="accent">APS</span></span>
-    </div>
+    </a>
     <button class="menu-toggle" id="menuToggle" aria-label="Apri menu">
         <span class="hamburger"></span>
     </button>
     <nav id="navMenu">
-        <a href="index.html#storia">La Nostra Storia</a>
-        <a href="index.html#progetti">Aree di Intervento</a>
+        <a href="#storia">La Nostra Storia</a>
+        <a href="#progetti">Aree di Intervento</a>
         <a href="trasparenza.html">Trasparenza</a>
         <a href="#contatti" class="btn-primary">Contattaci</a>
     </nav>
@@ -76,8 +76,8 @@
                 </div>
             </div>
             <div class="hero-image reveal-fade">
-                <div class="img-wrapper shadow-glow">
-                    <img src="images/intro.jpg" alt="Gruppo in ascolto e supporto">
+                <div class="img-wrapper hero-logo-wrapper shadow-glow">
+                    <img src="images/logo_aps.jpeg" alt="Logo Liberamente APS" class="hero-logo-img">
                 </div>
             </div>
         </div>
@@ -89,28 +89,12 @@
                 <h2>La Nostra Storia</h2>
                 <p class="storia-intro-text">Un cammino nato dalla ricerca personale e trasformato in un impegno condiviso per portare luce e vicinanza laddove regna il dolore.</p>
                 
-                <div class="storia-timeline">
-                    <div class="timeline-step">
-                        <div class="step-badge">1</div>
-                        <div class="step-content">
-                            <h4>La Ricerca e l'Incontro</h4>
-                            <p>C'è un momento in cui <strong>il silenzio dentro di te diventa assordante</strong>. Non succede di colpo. Arriva piano, si insinua nelle sere, nei lunedì mattina, nei momenti in cui dovresti sentirti bene e invece senti solo... un vuoto. Era anche <strong>una solitudine più sottile, più crudele: quella di chi non si sente davvero vista da nessuno</strong>. Nemmeno da se stessa. È quello che ho vissuto io. Qualche tempo dopo la situazione è peggiorata a causa di un lutto... <strong>Quando ho incontrato Andrea Magrin e il suo metodo, qualcosa si è mosso</strong> in un posto che non sapevo nemmeno di avere. Non era teoria. Non era un altro corso. Era come se qualcuno avesse finalmente acceso una luce in una stanza che tenevo chiusa da tempo. Da anni cercavo qualcosa nei corsi, nei libri, nelle parole degli altri. Poi un giorno una frase semplice mi ha fermata: <em>"se ti manca qualcosa, prova prima a darla."</em></p>
-                        </div>
-                    </div>
-                    <div class="timeline-step">
-                        <div class="step-badge">2</div>
-                        <div class="step-content">
-                            <h4>La Scelta di Donare</h4>
-                            <p>Ci ho pensato e ripensato, ho capito che invece di aspettare che qualcuno mi amasse, <strong>potevo scegliere io di amare. Per prima.</strong> Così, invece di aspettare di ricevere amore, ho deciso di darlo. A chi ne aveva più bisogno di me. A chi era difficile da amare. <strong>Ho iniziato a fare volontariato in carcere.</strong> Lì ho incontrato uomini che il mondo aveva etichettato come cattivi, pericolosi, irrecuperabili. Eppure, guardandoli negli occhi, ho visto qualcosa che conoscevo bene: il dolore. Perché <strong>anche chi ha fatto del male soffre</strong>. Anche chi sembra lontano da noi porta dentro ferite profonde. E mentre imparavo a dare amore, accadde una cosa inaspettata: <strong>ho scoperto che non avevo bisogno di riceverlo. Quello che avevo dentro stava esplodendo ed era abbastanza per tutti.</strong></p>
-                        </div>
-                    </div>
-                    <div class="timeline-step">
-                        <div class="step-badge">3</div>
-                        <div class="step-content">
-                            <h4>La Nascita dell'APS</h4>
-                            <p>Intanto il Metodo Magrin continuava a fare breccia; ho voluto capirlo di più. Viverlo dall'interno. Così <strong>ho deciso di intraprendere l'Accademia</strong>. Dopo un anno, ho voluto <strong>portare il metodo Magrin alle persone che avevo conosciuto in carcere</strong>. Dopo tre anni, ho capito che quella esperienza meritava di diventare qualcosa di più grande. Così, <strong>nel 2025, è nata l'associazione LiberaMente</strong>. Quello che era iniziato come un tentativo di salvarmi si è trasformato in qualcosa che non avrei mai immaginato: <strong>un luogo vivo, fatto di persone, storie e trasformazioni reali</strong>. Che porta cura nelle carceri, nelle scuole, negli ospedali, ma la cosa più importante non è dove arriviamo. È il perché: <strong>perché nessuno dovrebbe restare solo con il proprio dolore. Nemmeno tu.</strong></p>
-                        </div>
-                    </div>
+                <div class="storia-racconto">
+                    <p>C'è un momento in cui <strong>il silenzio dentro di te diventa assordante</strong>. Non succede di colpo. Arriva piano, si insinua nelle sere, nei lunedì mattina, nei momenti in cui dovresti sentirti bene e invece senti solo... un vuoto. Era anche <strong>una solitudine più sottile, più crudele: quella di chi non si sente davvero vista da nessuno</strong>. Nemmeno da se stessa. È quello che ho vissuto io. Qualche tempo dopo la situazione è peggiorata a causa di un lutto... <strong>Quando ho incontrato Andrea Magrin e il suo metodo, qualcosa si è mosso</strong> in un posto che non sapevo nemmeno di avere. Non era teoria. Non era un altro corso. Era come se qualcuno avesse finalmente acceso una luce in una stanza che tenevo chiusa da tempo. Da anni cercavo qualcosa nei corsi, nei libri, nelle parole degli altri. Poi un giorno una frase semplice mi ha fermata: <em>"se ti manca qualcosa, prova prima a darla."</em></p>
+                    
+                    <p>Ci ho pensato e ripensato, ho capito che invece di aspettare che qualcuno mi amasse, <strong>potevo scegliere io di amare. Per prima.</strong> Così, invece di aspettare di ricevere amore, ho deciso di darlo. A chi ne aveva più bisogno di me. A chi era difficile da amare. <strong>Ho iniziato a fare volontariato in carcere.</strong> Lì ho incontrato uomini che il mondo aveva etichettato come cattivi, pericolosi, irrecuperabili. Eppure, guardandoli negli occhi, ho visto qualcosa che conoscevo bene: il dolore. Perché <strong>anche chi ha fatto del male soffre</strong>. Anche chi sembra lontano da noi porta dentro ferite profonde. E mentre imparavo a dare amore, accadde una cosa inaspettata: <strong>ho scoperto che non avevo bisogno di riceverlo. Quello che avevo dentro stava esplodendo ed era abbastanza per tutti.</strong></p>
+                    
+                    <p>Intanto il Metodo Magrin continuava a fare breccia; ho voluto capirlo di più. Viverlo dall'interno. Così <strong>ho deciso di intraprendere l'Accademia</strong>. Dopo un anno, ho voluto <strong>portare il metodo Magrin alle persone che avevo conosciuto in carcere</strong>. Dopo tre anni, ho capito che quella esperienza meritava di diventare qualcosa di più grande. Così, <strong>nel 2025, è nata l'associazione LiberaMente</strong>. Quello che era iniziato come un tentativo di salvarmi si è trasformato in qualcosa che non avrei mai immaginato: <strong>un luogo vivo, fatto di persone, storie e trasformazioni reali</strong>. Che porta cura nelle carceri, nelle scuole, negli ospedali, ma la cosa più importante non è dove arriviamo. È il perché: <strong>perché nessuno dovrebbe restare solo con il proprio dolore. Nemmeno tu.</strong></p>
                 </div>
             </div>
             

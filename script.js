@@ -11,6 +11,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Logo scroll to top when on home page
+    const logoLink = document.querySelector('.navbar .logo');
+    if (logoLink) {
+        logoLink.addEventListener('click', (e) => {
+            const path = window.location.pathname;
+            const isHomePage = path === '/' || 
+                               path.endsWith('/index.html') ||
+                               path === '' ||
+                               path.endsWith('/');
+            if (isHomePage) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+                if (window.location.hash) {
+                    history.pushState('', document.title, path);
+                }
+            }
+        });
+    }
+
     // Mobile Hamburger Menu Toggle
     const menuToggle = document.getElementById('menuToggle');
     const navMenu = document.getElementById('navMenu');
