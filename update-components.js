@@ -31,12 +31,14 @@ function processFile(filePath, isSubdir) {
             .replace(/href="index\.html/g, 'href="../index.html')
             .replace(/href="trasparenza\.html/g, 'href="../trasparenza.html')
             .replace(/href="privacy\.html/g, 'href="../privacy.html')
+            .replace(/href="#chi-siamo"/g, 'href="../index.html#chi-siamo"')
             .replace(/href="#storia"/g, 'href="../index.html#storia"')
             .replace(/href="#progetti"/g, 'href="../index.html#progetti"')
             .replace(/href="#contatti"/g, 'href="../index.html#contatti"');
     } else if (fileName !== 'index.html') {
         // Replace local hash links on other root files like trasparenza.html
         localHeader = localHeader
+            .replace(/href="#chi-siamo"/g, 'href="index.html#chi-siamo"')
             .replace(/href="#storia"/g, 'href="index.html#storia"')
             .replace(/href="#progetti"/g, 'href="index.html#progetti"')
             .replace(/href="#contatti"/g, 'href="index.html#contatti"');

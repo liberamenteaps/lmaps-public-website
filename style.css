@@ -357,8 +357,7 @@ footer { background: var(--bg-dark); color: white; padding: 80px 0 20px; }
     .projects-flex .card { width: calc(50% - 16px); }
     .footer-content { grid-template-columns: 1fr 1fr; }
     .banner-metodo .container { flex-direction: column; text-align: center; }
-    
-    .storia-container, .metodo-tools, .metodo-extra { grid-template-columns: 1fr; gap: 40px; }
+    .storia-container, .chi-siamo-container, .metodo-tools, .metodo-extra { grid-template-columns: 1fr; gap: 40px; }
     .fasi-grid { grid-template-columns: repeat(2, 1fr); }
     
     .diventa-socio-card { padding: 32px; }
@@ -741,6 +740,99 @@ footer { background: var(--bg-dark); color: white; padding: 80px 0 20px; }
     text-transform: uppercase;
     letter-spacing: 1px;
     margin: 0;
+}
+
+/* --- Chi Siamo Section --- */
+.chi-siamo-container {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 64px;
+    align-items: start;
+}
+.chi-siamo-text h2 {
+    font-size: 2.8rem;
+    margin-bottom: 24px;
+    color: var(--bg-dark);
+}
+.chi-siamo-lead {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-main);
+    margin-bottom: 24px;
+    line-height: 1.7;
+}
+.chi-siamo-text p {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    line-height: 1.75;
+    text-align: justify;
+}
+.chi-siamo-quote-box {
+    margin-top: 40px;
+    padding: 24px 32px;
+    background: hsla(142, 70%, 40%, 0.05);
+    border-left: 4px solid var(--primary-color);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+.chi-siamo-quote-box .quote-text {
+    font-size: 1.15rem;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--bg-dark);
+    margin: 0;
+    line-height: 1.5;
+}
+.chi-siamo-work-card {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: var(--radius-lg);
+    padding: 40px;
+    box-shadow: var(--shadow-md);
+    border-top: 4px solid var(--primary-color);
+    transition: var(--transition);
+}
+.chi-siamo-work-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+.chi-siamo-work-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: var(--bg-dark);
+}
+.work-list {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+.work-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+.work-icon {
+    background: hsla(142, 70%, 40%, 0.1);
+    color: var(--primary-color);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.work-content strong {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--bg-dark);
+    margin-bottom: 6px;
+}
+.work-content p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.5;
 }
 
 
