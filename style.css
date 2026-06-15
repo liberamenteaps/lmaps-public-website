@@ -410,154 +410,7 @@ footer { background: var(--bg-dark); color: white; padding: 80px 0 20px; }
 .reveal-fade { opacity: 0; transition: all 1s ease-in-out; }
 .reveal-up.active, .reveal-fade.active { opacity: 1; transform: translate(0); }
 
-/* --- Responsive --- */
-@media (max-width: 992px) {
-    .hero {
-        min-height: 100dvh;
-        padding-top: 140px;
-        padding-bottom: 80px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .hero-container { 
-        text-align: center; 
-        gap: 0;
-    }
-    .hero-content h1 { font-size: 2.6rem; }
-    .hero-actions { justify-content: center; }
-    .projects-flex .card { width: calc(50% - 16px); }
-    .footer-content { grid-template-columns: 1fr 1fr; }
-    .banner-metodo .container { flex-direction: column; text-align: center; }
-    .storia-container, .chi-siamo-container, .metodo-tools, .metodo-extra { grid-template-columns: 1fr; gap: 40px; }
-    .fasi-grid { grid-template-columns: repeat(2, 1fr); }
-    
-    .diventa-socio-card { padding: 32px; }
-}
 
-@media (max-width: 768px) {
-    .projects-flex .card { width: 100%; min-width: 0; }
-    .footer-content { grid-template-columns: 1fr; }
-    
-    /* Mobile Navigation Menu */
-    .menu-toggle {
-        display: block;
-        margin-right: 16px;
-    }
-    
-    .navbar .logo {
-        font-size: 1.25rem;
-        margin-left: 16px;
-        gap: 8px;
-    }
-    .logo-img {
-        height: 35px;
-    }
-    
-    .navbar nav {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 100%;
-        height: 100dvh;
-        background: rgba(255, 255, 255, 0.96);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        gap: 36px;
-        transition: right 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-        z-index: 1000;
-        margin-right: 0;
-        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.03);
-        padding: 40px;
-    }
-    
-    .navbar nav.active {
-        right: 0;
-    }
-    
-    .navbar nav a {
-        font-size: 1.4rem;
-        font-weight: 700;
-        letter-spacing: -0.5px;
-        transition: color 0.3s ease;
-    }
-    .navbar nav a:hover {
-        color: var(--primary-color);
-    }
-    .navbar nav a::after {
-        display: none !important;
-    }
-    
-    .navbar nav a.btn-primary {
-        width: 100%;
-        max-width: 250px;
-        text-align: center;
-        font-size: 1.1rem;
-        padding: 12px 24px;
-    }
-    
-    .fasi-grid { grid-template-columns: 1fr; }
-    .benefici-list { grid-template-columns: 1fr; }
-    .diventa-socio h2 { font-size: 2.2rem; }
-    .project-banner-img {
-        height: auto;
-        margin-bottom: 24px;
-    }
-    .chi-siamo-work-card {
-        padding: 24px;
-    }
-    .chi-siamo-work-card h3 {
-        margin-bottom: 20px;
-    }
-    .chi-siamo-quote-box {
-        padding: 16px 20px;
-        margin-top: 24px;
-    }
-}
-
-@media (max-width: 576px) {
-    .hero-content h1 {
-        font-size: 1.9rem;
-        line-height: 1.3;
-        letter-spacing: -0.5px;
-    }
-    .hero-content h1 .hero-subheading {
-        font-size: 1.15rem;
-        line-height: 1.4;
-        margin-top: 10px;
-    }
-    .hero-content p {
-        font-size: 1.05rem;
-        margin-bottom: 24px;
-    }
-    .hero-actions {
-        flex-direction: column;
-        width: 100%;
-        gap: 12px;
-    }
-    .hero-actions .btn-primary, .hero-actions .btn-secondary {
-        width: 100%;
-        text-align: center;
-    }
-    .chi-siamo-work-card {
-        padding: 20px 16px;
-    }
-    .navbar .logo {
-        font-size: 1.1rem;
-        gap: 6px;
-        margin-left: 12px;
-    }
-    .logo-img {
-        height: 30px;
-    }
-    .menu-toggle {
-        margin-right: 12px;
-    }
-}
 
 /* --- Fixing 'Diventa Socio' Visibility --- */
 .diventa-socio h2 {
@@ -939,6 +792,155 @@ footer { background: var(--bg-dark); color: white; padding: 80px 0 20px; }
     color: var(--text-muted);
     margin: 0;
     line-height: 1.5;
+}
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+    .hero {
+        min-height: 100dvh;
+        padding-top: 140px;
+        padding-bottom: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .hero-container { 
+        text-align: center; 
+        gap: 0;
+    }
+    .hero-content h1 { font-size: 2.6rem; }
+    .hero-actions { justify-content: center; }
+    .projects-flex .card { width: calc(50% - 16px); }
+    .footer-content { grid-template-columns: 1fr 1fr; }
+    .banner-metodo .container { flex-direction: column; text-align: center; }
+    .storia-container, .chi-siamo-container, .metodo-tools, .metodo-extra { grid-template-columns: 1fr; gap: 40px; }
+    .fasi-grid { grid-template-columns: repeat(2, 1fr); }
+    
+    .diventa-socio-card { padding: 32px; }
+}
+
+@media (max-width: 768px) {
+    .projects-flex .card { width: 100%; min-width: 0; }
+    .footer-content { grid-template-columns: 1fr; }
+    
+    /* Mobile Navigation Menu */
+    .menu-toggle {
+        display: block;
+        margin-right: 16px;
+    }
+    
+    .navbar .logo {
+        font-size: 1.25rem;
+        margin-left: 16px;
+        gap: 8px;
+    }
+    .logo-img {
+        height: 35px;
+    }
+    
+    .navbar nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100dvh;
+        background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        gap: 36px;
+        transition: right 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        z-index: 1000;
+        margin-right: 0;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.03);
+        padding: 40px;
+    }
+    
+    .navbar nav.active {
+        right: 0;
+    }
+    
+    .navbar nav a {
+        font-size: 1.4rem;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        transition: color 0.3s ease;
+    }
+    .navbar nav a:hover {
+        color: var(--primary-color);
+    }
+    .navbar nav a::after {
+        display: none !important;
+    }
+    
+    .navbar nav a.btn-primary {
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
+        font-size: 1.1rem;
+        padding: 12px 24px;
+    }
+    
+    .fasi-grid { grid-template-columns: 1fr; }
+    .benefici-list { grid-template-columns: 1fr; }
+    .diventa-socio h2 { font-size: 2.2rem; }
+    .project-banner-img {
+        height: auto;
+        margin-bottom: 24px;
+    }
+    .chi-siamo-work-card {
+        padding: 24px;
+    }
+    .chi-siamo-work-card h3 {
+        margin-bottom: 20px;
+    }
+    .chi-siamo-quote-box {
+        padding: 16px 20px;
+        margin-top: 24px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content h1 {
+        font-size: 1.9rem;
+        line-height: 1.3;
+        letter-spacing: -0.5px;
+    }
+    .hero-content h1 .hero-subheading {
+        font-size: 1.15rem;
+        line-height: 1.4;
+        margin-top: 10px;
+    }
+    .hero-content p {
+        font-size: 1.05rem;
+        margin-bottom: 24px;
+    }
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+    .hero-actions .btn-primary, .hero-actions .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+    .chi-siamo-work-card {
+        padding: 20px 16px;
+    }
+    .navbar .logo {
+        font-size: 1.1rem;
+        gap: 6px;
+        margin-left: 12px;
+    }
+    .logo-img {
+        height: 30px;
+    }
+    .menu-toggle {
+        margin-right: 12px;
+    }
 }
 
 
