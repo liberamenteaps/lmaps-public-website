@@ -86,3 +86,48 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 });
+
+// Copy to Clipboard helper
+window.copyToClipboard = function(text, buttonElement) {
+    if (!navigator.clipboard) {
+        // Fallback for older browsers
+        const textArea = document.createElement("textarea");
+        textArea.value = text;
+        textArea.style.position = "fixed";  // avoid scrolling to bottom
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        try {
+            document.execCommand('copy');
+            showTooltip(buttonElement, 'Copiato!');
+        } catch (err) {
+            console.error('Fallback: Impossibile copiare il testo', err);
+        }
+        document.body.removeChild(textArea);
+        return;
+    }
+    navigator.clipboard.writeText(text).then(() => {
+        showTooltip(buttonElement, 'Copiato!');
+    }).catch(err => {
+        console.error('Impossibile copiare il testo: ', err);
+    });
+};
+
+function showTooltip(btn, message) {
+    let tooltip = btn.querySelector('.copy-tooltip');
+    if (!tooltip) {
+        tooltip = document.createElement('span');
+        tooltip.className = 'copy-tooltip';
+        btn.appendChild(tooltip);
+    }
+    
+    tooltip.textContent = message;
+    tooltip.classList.add('show');
+    btn.classList.add('copied');
+    
+    setTimeout(() => {
+        tooltip.classList.remove('show');
+        btn.classList.remove('copied');
+    }, 2000);
+}
+
