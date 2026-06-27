@@ -346,7 +346,7 @@ a {
     left: 0 !important;
     width: 100% !important;
     height: 100% !important;
-    filter: none !important;
+    filter: brightness(1.15) !important;
     transform: none !important;
     background-size: contain !important;
     background-repeat: no-repeat !important;
@@ -359,7 +359,7 @@ a {
     left: 0 !important;
     width: 100% !important;
     height: 100% !important;
-    filter: none !important;
+    filter: brightness(1.15) !important;
     transform: none !important;
     background-size: cover !important;
     background-position: center !important;
@@ -368,7 +368,7 @@ a {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.7) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.15) 60%, rgba(0, 0, 0, 0.45) 100%);
     z-index: 2;
 }
 
@@ -394,6 +394,7 @@ a {
     margin-bottom: 24px;
     letter-spacing: -1px;
     line-height: 1.25;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
 }
 
 .hero-content h1 span {
@@ -408,6 +409,7 @@ a {
     margin-top: 16px;
     letter-spacing: 0;
     line-height: 1.4;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
 }
 
 .hero-content p {
@@ -416,6 +418,7 @@ a {
     margin: 0 auto 40px;
     max-width: 650px;
     line-height: 1.6;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
 }
 
 .hero-actions {
