@@ -862,18 +862,36 @@ footer {
     transform: translateX(5px);
 }
 
+.footer-social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
 .footer-social-link {
     display: inline-flex !important;
     align-items: center;
     gap: 8px;
     color: hsl(220, 10%, 60%) !important;
-    margin-top: 16px;
     font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease !important;
 }
 
 .footer-social-link:hover {
-    color: #E1306C !important;
     transform: translateY(-2px) !important;
+}
+
+.footer-social-link.instagram:hover {
+    color: #E1306C !important;
+}
+
+.footer-social-link.facebook:hover {
+    color: #1877F2 !important;
+}
+
+.footer-social-link.tiktok:hover {
+    color: #25F4EE !important;
 }
 
 .footer-social-link svg {
