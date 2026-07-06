@@ -86,6 +86,7 @@ a {
     color: var(--bg-dark);
     margin-left: 24px;
     white-space: nowrap;
+    transition: var(--transition);
 }
 
 .navbar .logo .accent {
@@ -100,6 +101,7 @@ a {
     background: white;
     padding: 2px;
     box-shadow: var(--shadow-sm);
+    transition: var(--transition);
 }
 
 .navbar nav {
@@ -142,6 +144,10 @@ a {
     padding: 12px 0;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
     border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.navbar.scrolled .logo {
+    font-size: 1.3rem;
 }
 
 /* --- Home Page Navbar Custom Styles (for Dark Hero Background) --- */
@@ -386,6 +392,27 @@ a {
 .hero-content {
     max-width: 800px;
     margin: 0 auto;
+}
+
+.hero-logo-wrapper {
+    margin-bottom: 24px;
+    display: inline-block;
+}
+
+.hero-logo-img {
+    height: 260px;
+    width: auto;
+    border-radius: 24px;
+    object-fit: contain;
+    background: white;
+    padding: 10px;
+    box-shadow: var(--shadow-lg), var(--shadow-glow);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.hero-logo-img:hover {
+    transform: scale(1.05);
 }
 
 .hero-content h1 {
@@ -1802,11 +1829,10 @@ footer {
     .navbar .logo {
         font-size: 1.25rem;
         margin-left: 16px;
-        gap: 8px;
     }
 
-    .logo-img {
-        height: 35px;
+    .hero-logo-img {
+        height: 180px;
     }
 
     .navbar nav {
@@ -1924,12 +1950,11 @@ footer {
 
     .navbar .logo {
         font-size: 1.1rem;
-        gap: 6px;
         margin-left: 12px;
     }
 
-    .logo-img {
-        height: 30px;
+    .hero-logo-img {
+        height: 130px;
     }
 
     .menu-toggle {
