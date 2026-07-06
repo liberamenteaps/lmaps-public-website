@@ -361,12 +361,12 @@ a {
 }
 
 .hero-bg-cover-clear {
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    filter: brightness(1.15) !important;
-    transform: none !important;
+    top: -20px !important;
+    left: -20px !important;
+    width: calc(100% + 40px) !important;
+    height: calc(100% + 40px) !important;
+    filter: brightness(0.85) blur(10px) !important;
+    transform: scale(1.05) !important;
     background-size: cover !important;
     background-position: center !important;
 }
@@ -406,8 +406,8 @@ a {
     object-fit: contain;
     background: white;
     padding: 10px;
-    box-shadow: var(--shadow-lg), var(--shadow-glow);
-    border: 2px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.25), 0 10px 30px rgba(0, 0, 0, 0.1), var(--shadow-glow);
+    border: none;
     transition: transform 0.3s ease;
 }
 
