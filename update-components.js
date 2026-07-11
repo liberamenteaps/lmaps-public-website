@@ -35,13 +35,18 @@ function processFile(filePath, isSubdir) {
             .replace(/href="#cosa-facciamo"/g, 'href="../index.html#cosa-facciamo"')
             .replace(/href="#progetti"/g, 'href="../index.html#progetti"')
             .replace(/href="#contatti"/g, 'href="../index.html#contatti"');
-    } else if (fileName !== 'index.html') {
+    } else if (fileName !== 'index.html' && fileName !== 'draft.html') {
         // Replace local hash links on other root files like trasparenza.html
         localHeader = localHeader
             .replace(/href="#chi-siamo"/g, 'href="index.html#chi-siamo"')
             .replace(/href="#cosa-facciamo"/g, 'href="index.html#cosa-facciamo"')
             .replace(/href="#progetti"/g, 'href="index.html#progetti"')
             .replace(/href="#contatti"/g, 'href="index.html#contatti"');
+    }
+    
+    // Support draft local navigation on draft.html
+    if (fileName === 'draft.html') {
+        localHeader = localHeader.replace(/href="index\.html"/g, 'href="draft.html"');
     }
     
     // 2. Prepare Footer
@@ -52,6 +57,10 @@ function processFile(filePath, isSubdir) {
             .replace(/href="index\.html/g, 'href="../index.html')
             .replace(/href="trasparenza\.html/g, 'href="../trasparenza.html')
             .replace(/href="privacy\.html/g, 'href="../privacy.html');
+    }
+
+    if (fileName === 'draft.html') {
+        localFooter = localFooter.replace(/href="index\.html#sostienici"/g, 'href="draft.html#sostienici"');
     }
 
     // 3. Replace in HTML content
