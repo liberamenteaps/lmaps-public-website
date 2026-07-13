@@ -2322,3 +2322,20 @@ footer {
         padding: 32px;
     }
 }
+
+/* --- Crowdfunding Card --- */
+.sidebar-card.crowdfunding-card {
+    border: 2px dashed var(--primary-color);
+    background-color: hsla(142, 70%, 40%, 0.02);
+    transition: var(--transition);
+}
+
+.sidebar-card.crowdfunding-card:hover {
+    background-color: hsla(142, 70%, 40%, 0.05);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.sidebar-card.crowdfunding-card h4 {
+    border-bottom-color: hsla(142, 70%, 40%, 0.15);
+}
