@@ -2339,3 +2339,22 @@ footer {
 .sidebar-card.crowdfunding-card h4 {
     border-bottom-color: hsla(142, 70%, 40%, 0.15);
 }
+
+/* --- Disclaimer/Info Boxes --- */
+.disclaimer-box {
+    background-color: hsla(142, 25%, 40%, 0.04);
+    border-left: 4px solid var(--primary-color);
+    padding: 18px 24px;
+    margin: 32px 0;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.disclaimer-box p {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 1.05rem !important;
+    color: var(--text-main) !important;
+    margin: 0 !important;
+    line-height: 1.65 !important;
+    text-align: justify !important;
+}
