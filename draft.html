@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=1.5.295e8350">
+    <link rel="stylesheet" href="style.css?v=1.5.f8cb331c">
     <link rel="icon" type="image/jpeg" href="images/logo_aps.jpeg">
     <link rel="canonical" href="https://liberamenteaps.com/">
 
@@ -353,89 +353,114 @@
     <section id="progetti" class="section-light">
         <div class="container text-center reveal-up">
             <h2>Aree di Intervento</h2>
-            <p class="subtitle">Creiamo valore sul territorio attraverso sei direttrici principali, sviluppando progetti
-                su misura per ogni realtà.</p>
+            <p class="subtitle">Attualmente concentriamo le nostre risorse principali sul progetto <strong>Carceri e IPM</strong>, gettando le basi per i futuri interventi negli altri ambiti sociali.</p>
         </div>
 
-        <div class="projects-flex container">
-
-            <!-- 1. Scuole -->
-            <div class="card active-card reveal-up" style="transition-delay: 0.1s;">
-                <div class="card-img" style="background-image: url('images/scuole.jpg');">
-                    <span class="status-badge active card-badge"><span class="pulse-dot"></span>Attivo</span>
+        <div class="container">
+            <!-- Featured Primary Focus Card: Carceri -->
+            <div class="featured-project-card reveal-up">
+                <div class="featured-card-img" style="background-image: url('images/carcere_old.png');">
+                    <span class="status-badge active card-badge featured-badge">
+                        <span class="pulse-dot"></span> Focus Principale &bull; Attivo
+                    </span>
                 </div>
-                <div class="card-content">
-                    <h3>Scuole e Università</h3>
-                    <p>Educazione emotiva per prevenire il disagio giovanile. Lavoriamo con studenti e corpo docenti.
+                <div class="featured-card-content">
+                    <span class="featured-tag">AREA PRIORITARIA</span>
+                    <h3>Carceri e IPM</h3>
+                    <p class="featured-description">
+                        Sostegno emotivo e percorsi di consapevolezza corporea attraverso il Metodo Magrin per detenuti adulti e giovani ospiti degli istituti penitenziari minorili.
                     </p>
-                    <a href="progetti/scuole.html" class="btn-outline">Scopri di più &rarr;</a>
+                    <ul class="featured-highlights">
+                        <li>
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Percorsi esperienziali e gestione delle emozioni
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Sessioni di gruppo e supporto individuale
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Iniziativa di Scrittura: <em>"Il corsivo dei briganti"</em>
+                        </li>
+                    </ul>
+                    <div class="featured-actions">
+                        <a href="progetti/carceri.html" class="btn-primary large">Scopri il Progetto Carceri &rarr;</a>
+                        <a href="https://www.produzionidalbasso.com/project/il-corsivo-dei-briganti/" target="_blank" rel="noopener" class="btn-secondary large">Sostieni il Crowdfunding</a>
+                    </div>
                 </div>
             </div>
 
-            <!-- 2. Ospedali -->
-            <div class="card reveal-up" style="transition-delay: 0.2s;">
-                <div class="card-img" style="background-image: url('images/ospedali.png');">
-                    <span class="status-badge planning card-badge">In Programmazione</span>
-                </div>
-                <div class="card-content">
-                    <h3>Ospedali e Sanità</h3>
-                    <p>Supporto al personale sanitario (prevenzione burnout) e accompagnamento a familiari e degenti</p>
-                    <a href="progetti/ospedali.html" class="btn-outline">Scopri di più &rarr;</a>
-                </div>
+            <!-- Secondary Areas Header -->
+            <div class="secondary-projects-header text-center reveal-up">
+                <h3>Altre Aree di Intervento</h3>
+                <p class="secondary-subtitle">Progetti in fase di sviluppo e futura programmazione per la comunità.</p>
             </div>
 
-            <!-- 3. Carceri -->
-            <div class="card active-card reveal-up" style="transition-delay: 0.3s;">
-                <div class="card-img" style="background-image: url('images/carcere_old.png');">
-                    <span class="status-badge active card-badge"><span class="pulse-dot"></span>Attivo</span>
-                </div>
-                <div class="card-content">
-                    <h3>CARCERI e IPM</h3>
-                    <p>Sostegno emotivo e percorsi di consapevolezza per detenuti adulti e giovani ospiti degli istituti
-                        minorili.</p>
-                    <a href="progetti/carceri.html" class="btn-outline">Scopri di più &rarr;</a>
-                </div>
-            </div>
+            <!-- Secondary Projects Grid (Compact Cards) -->
+            <div class="secondary-projects-grid reveal-up">
 
-            <!-- 4. Aziende -->
-            <div class="card reveal-up" style="transition-delay: 0.4s;">
-                <div class="card-img" style="background-image: url('images/aziende.jpg');">
-                    <span class="status-badge planning card-badge">In Programmazione</span>
+                <!-- 1. Scuole -->
+                <div class="card card-compact">
+                    <div class="card-img compact-img" style="background-image: url('images/scuole.jpg');">
+                        <span class="status-badge planning card-badge">In Programmazione</span>
+                    </div>
+                    <div class="card-content compact-content">
+                        <h4>Scuole e Università</h4>
+                        <p>Educazione emotiva per prevenire il disagio giovanile con studenti e docenti.</p>
+                        <a href="progetti/scuole.html" class="btn-link">Scopri di più &rarr;</a>
+                    </div>
                 </div>
-                <div class="card-content">
-                    <h3>Aziende e Organizzazioni</h3>
-                    <p>Welfare aziendale e team building: forniamo strumenti per la gestione dello stress e la coesione
-                        dei gruppi di lavoro.</p>
-                    <a href="progetti/aziende.html" class="btn-outline">Scopri di più &rarr;</a>
-                </div>
-            </div>
 
-            <!-- 5. Sociale -->
-            <div class="card reveal-up" style="transition-delay: 0.5s;">
-                <div class="card-img" style="background-image: url('images/sociale.jpg');">
-                    <span class="status-badge planning card-badge">In Programmazione</span>
+                <!-- 2. Ospedali -->
+                <div class="card card-compact">
+                    <div class="card-img compact-img" style="background-image: url('images/ospedali.png');">
+                        <span class="status-badge planning card-badge">In Programmazione</span>
+                    </div>
+                    <div class="card-content compact-content">
+                        <h4>Ospedali e Sanità</h4>
+                        <p>Supporto al personale sanitario (burnout) e accompagnamento a familiari e degenti.</p>
+                        <a href="progetti/ospedali.html" class="btn-link">Scopri di più &rarr;</a>
+                    </div>
                 </div>
-                <div class="card-content">
-                    <h3>Servizi Sociali e Comunità</h3>
-                    <p>Interventi a supporto di persone in situazioni di fragilità o transizione, educatori e volontari
-                        di comunità.</p>
-                    <a href="progetti/sociale.html" class="btn-outline">Scopri di più &rarr;</a>
-                </div>
-            </div>
 
-            <!-- 6. Sport e Tempo Libero -->
-            <div class="card reveal-up" style="transition-delay: 0.6s;">
-                <div class="card-img" style="background-image: url('images/sport.png');">
-                    <span class="status-badge planning card-badge">In Programmazione</span>
+                <!-- 3. Aziende -->
+                <div class="card card-compact">
+                    <div class="card-img compact-img" style="background-image: url('images/aziende.jpg');">
+                        <span class="status-badge planning card-badge">In Programmazione</span>
+                    </div>
+                    <div class="card-content compact-content">
+                        <h4>Aziende e Organizzazioni</h4>
+                        <p>Welfare aziendale e gestione dello stress per la coesione dei team di lavoro.</p>
+                        <a href="progetti/aziende.html" class="btn-link">Scopri di più &rarr;</a>
+                    </div>
                 </div>
-                <div class="card-content">
-                    <h3>Sport e Tempo Libero</h3>
-                    <p>Gestione dell'ansia da prestazione, benessere psicofisico e scioglimento dei blocchi nell'ambito
-                        delle attività sportive.</p>
-                    <a href="progetti/sport.html" class="btn-outline">Scopri di più &rarr;</a>
-                </div>
-            </div>
 
+                <!-- 4. Sociale -->
+                <div class="card card-compact">
+                    <div class="card-img compact-img" style="background-image: url('images/sociale.jpg');">
+                        <span class="status-badge planning card-badge">In Programmazione</span>
+                    </div>
+                    <div class="card-content compact-content">
+                        <h4>Servizi Sociali e Comunità</h4>
+                        <p>Interventi a supporto di persone in situazione di fragilità, educatori e volontari.</p>
+                        <a href="progetti/sociale.html" class="btn-link">Scopri di più &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- 5. Sport e Tempo Libero -->
+                <div class="card card-compact">
+                    <div class="card-img compact-img" style="background-image: url('images/sport.png');">
+                        <span class="status-badge planning card-badge">In Programmazione</span>
+                    </div>
+                    <div class="card-content compact-content">
+                        <h4>Sport e Tempo Libero</h4>
+                        <p>Gestione dell'ansia da prestazione e scioglimento dei blocchi nell'ambito sportivo.</p>
+                        <a href="progetti/sport.html" class="btn-link">Scopri di più &rarr;</a>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 

@@ -2358,3 +2358,243 @@ footer {
     line-height: 1.65 !important;
     text-align: justify !important;
 }
+
+/* --- Featured Project Card (Focus Principale: Carceri) --- */
+.featured-project-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 12px 36px rgba(59, 122, 87, 0.12), var(--shadow-md);
+    border: 2px solid var(--primary-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-bottom: 64px;
+    position: relative;
+    transition: var(--transition);
+}
+
+.featured-project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 48px rgba(59, 122, 87, 0.18), var(--shadow-lg);
+}
+
+.featured-card-img {
+    min-height: 380px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.featured-card-img::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.05));
+}
+
+.featured-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    background: white !important;
+    color: var(--primary-color) !important;
+    border: 1.5px solid var(--primary-color) !important;
+    padding: 6px 16px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.featured-card-content {
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(135deg, #ffffff 0%, hsl(142, 28%, 98%) 100%);
+    text-align: left;
+}
+
+.featured-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.featured-card-content h3 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--bg-dark);
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.featured-description {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: var(--text-main);
+    margin-bottom: 24px;
+}
+
+.featured-highlights {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.featured-highlights li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--bg-dark);
+}
+
+.featured-highlights li svg {
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.featured-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Secondary Projects Grid & Compact Cards */
+.secondary-projects-header {
+    margin-top: 20px;
+    margin-bottom: 36px;
+}
+
+.secondary-projects-header h3 {
+    font-size: 1.8rem;
+    color: var(--bg-dark);
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.secondary-subtitle {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+}
+
+.secondary-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.card-compact {
+    background: white;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.card-compact:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: rgba(59, 122, 87, 0.3);
+}
+
+.compact-img {
+    height: 140px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.compact-content {
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-compact h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--bg-dark);
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.card-compact p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    flex-grow: 1;
+}
+
+.btn-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    display: inline-block;
+}
+
+.btn-link:hover {
+    color: var(--primary-color-hover);
+    text-decoration: underline;
+}
+
+/* Responsive tweaks for featured & secondary cards */
+@media (max-width: 1200px) {
+    .secondary-projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .featured-project-card {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-card-img {
+        min-height: 260px;
+    }
+
+    .featured-card-content {
+        padding: 32px 24px;
+    }
+
+    .secondary-projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .secondary-projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .featured-actions .btn-primary,
+    .featured-actions .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+}
