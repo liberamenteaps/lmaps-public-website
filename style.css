@@ -1052,6 +1052,13 @@ footer {
     margin-bottom: 80px;
 }
 
+.metodo-source {
+    text-align: center;
+    font-style: italic;
+    color: var(--text-muted);
+    margin: -56px 0 80px;
+}
+
 .tool-card {
     background: white;
     padding: 40px;
@@ -1328,7 +1335,7 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     margin: 45px auto 0;
-    max-width: 600px;
+    max-width: 300px;
     text-align: left;
 }
 
@@ -2359,6 +2366,22 @@ footer {
     text-align: justify !important;
 }
 
+/* --- Legal disclaimer (attività non sanitarie / indipendenza dal Metodo Magrin) --- */
+.legal-disclaimer {
+    margin: 32px 0;
+    padding: 16px 20px;
+    border-top: 1px solid hsla(0, 0%, 0%, 0.08);
+    border-bottom: 1px solid hsla(0, 0%, 0%, 0.08);
+}
+
+.legal-disclaimer p {
+    font-size: 0.9rem !important;
+    line-height: 1.6 !important;
+    color: var(--text-muted) !important;
+    text-align: center;
+    margin: 0 !important;
+}
+
 /* --- Featured Project Card (Focus Principale: Carceri) --- */
 .featured-project-card {
     background: white;
@@ -2491,7 +2514,7 @@ footer {
 
 .secondary-projects-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 
@@ -2560,7 +2583,7 @@ footer {
 /* Responsive tweaks for featured & secondary cards */
 @media (max-width: 1200px) {
     .secondary-projects-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
